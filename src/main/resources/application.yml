@@ -1,0 +1,53 @@
+spring:
+  application:
+    name: springboot-examples
+
+logging:
+  level:
+    root: INFO
+    com.doni: DEBUG
+ 
+server:
+  port: 8080
+
+---
+
+spring:
+  profiles: mongodb
+  data:    
+    mongodb:      
+      host: localhost      
+      port: 27017      
+      database: employee
+      
+---
+
+spring:  
+  profiles: mariadb
+  datasource:    
+    url: jdbc:mariadb://localhost:3306/dt    
+    driver-class-name: org.mariadb.jdbc.Driver    
+    username: dtuser    
+    password: service
+    
+---
+
+spring:  
+  profiles: h2
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:file:~/data/springboot-examples-db;AUTO_SERVER=TRUE
+    username: dtuser
+    password: null
+#    url: jdbc:h2:mem:testdb
+#    username: sa
+#    password: null
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    database: H2
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update

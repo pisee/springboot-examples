@@ -1,5 +1,6 @@
 curl -i -X GET http://127.0.0.1:8080/api/employees/1
-curl -i -X GET http://127.0.0.1:8080/api/head/1
-curl -i -X GET http://127.0.0.1:8080/api/exception/1
+curl -i -X GET http://127.0.0.1:8080/api/employees/head/1
+curl -i -X GET http://127.0.0.1:8080/api/employees/exception/1
 
-curl -i -d '{"empNo":"1", "empName":"dany", "sal":2000}' -H "Content-Type:application/json" -X POST http://localhost:8080/api/employee
+curl -i -d '{"empNo":"1", "empName":"dany", "sal":2000}' -H "Content-Type:application/json" -X POST http://localhost:8080/api/employees
+curl -i -d '{"empNo":"2", "empName":"dany", "sal":2000}' -H "Content-Type:application/json" -X POST http://localhost:8080/api/employees/exception

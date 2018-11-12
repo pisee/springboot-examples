@@ -2,6 +2,7 @@ package com.doni.springboot.examples.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -13,7 +14,7 @@ import lombok.ToString;
 @ToString
 @EqualsAndHashCode
 @Entity
-
+@Table(name="EMP")
 public class Employee {
 
 	@Id
