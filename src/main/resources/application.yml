@@ -1,7 +1,9 @@
 spring:
   application:
     name: springboot-examples
-
+  resources:
+    add-mappings: true
+    
 logging:
   level:
     root: INFO

@@ -4,7 +4,6 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,9 +21,15 @@ import com.doni.springboot.examples.domain.Result;
 import com.doni.springboot.examples.exception.ForbiddenException;
 import com.doni.springboot.examples.service.EmpService;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
+import io.swagger.annotations.ApiOperation;
+
 @CrossOrigin
 @RestController
 @RequestMapping("/api/employees")
+@Api(value = "Employee", description = "Employee controller")
 public class EmpController {
 
 	private static final Logger logger = LoggerFactory.getLogger(EmpController.class);
@@ -41,6 +46,10 @@ public class EmpController {
 //		this.empService = empService;
 //	}
 
+	@ApiOperation(value = "사원조회")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "empNo", value = "사원번호", required = true, dataType = "String", paramType = "path")
+    })
 	@GetMapping("/{empNo}")
 	public Employee findbyId(@PathVariable String empNo) {
 		logger.debug("empNo : "+ empNo);
