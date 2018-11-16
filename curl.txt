@@ -4,3 +4,11 @@ curl -i -X GET http://127.0.0.1:8080/api/employees/exception/1
 
 curl -i -d '{"empNo":"1", "empName":"dany", "sal":2000}' -H "Content-Type:application/json" -X POST http://localhost:8080/api/employees
 curl -i -d '{"empNo":"2", "empName":"dany", "sal":2000}' -H "Content-Type:application/json" -X POST http://localhost:8080/api/employees/exception
+
+
+
+mongod.exe --dbpath "D:\00_common\mongodb\data\db"  --logpath "D:\00_common\mongodb\log\mongod.log
+
+show dbs
+db.emp.find()
+db.emp.drop()
