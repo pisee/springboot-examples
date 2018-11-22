@@ -9,6 +9,7 @@ import javax.annotation.Resource;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ActiveProfiles;
@@ -18,9 +19,9 @@ import org.springframework.transaction.annotation.Transactional;
 import com.doni.springboot.examples.domain.Employee;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@DataJpaTest
 @ActiveProfiles({"h2"})
-public class EmpRepositoryTest {
+public class EmpRepositoryTest2 {
 
 	@Resource
 	EmpRepository repository;
@@ -53,7 +54,7 @@ public class EmpRepositoryTest {
 //	@Rollback(false)
 	public void saveone() {
 		Employee emp = new Employee();
-		emp.setEmpNo("002");
+		emp.setEmpNo("003");
 		emp.setEmpName("batman");
 		emp.setSal(1000);
 		Employee save = repository.save(emp );
