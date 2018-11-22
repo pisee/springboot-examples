@@ -12,6 +12,11 @@ logging:
 server:
   port: 8080
 
+process:
+  work:
+    directory: cli
+    script: test.bat
+    
 ---
 
 spring:
