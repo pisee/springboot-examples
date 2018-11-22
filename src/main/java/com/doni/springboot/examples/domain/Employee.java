@@ -19,6 +19,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @Entity
 @Table(name="EMP")
+//@Document(collection="EMP")
 public class Employee {
 
 	@Id

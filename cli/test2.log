@@ -1,0 +1,2 @@
+timestamp, name, pci.bus_id, driver_version, pstate, pcie.link.gen.max, pcie.link.gen.current, temperature.gpu, utilization.gpu [%], utilization.memory [%], memory.total [MB], memory.free [MB], memory.used [MB]
+2018/11/22 20:54:04.359, NVS 5200M, 0000:01:00.0, 327.02, [Not Supported], [Not Supported], [Not Supported], 46, [Not Supported], [Not Supported], 1023 MB, 35 MB, 988 MB
