@@ -32,6 +32,14 @@ public class EmpRepositoryTest2 {
 		System.out.println("findAll= " + findAll.size());
 	}
 
+	@Test
+	public void findById() {
+		String empNo = "1";
+		Employee employee1 = repository.findById(empNo).orElse(null);
+		Employee employee2 = repository.findById(empNo).orElse(null);
+		
+		System.out.println(employee1==employee2);
+	}
 	
 	@Test
 	public void save() {
