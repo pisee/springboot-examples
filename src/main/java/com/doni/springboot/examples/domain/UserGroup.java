@@ -23,8 +23,8 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name="group_doni")
-public class Group {
+@Table(name="user_group")
+public class UserGroup {
 	@Id
 	@Column(name = "group_id")
 	private String groupId;

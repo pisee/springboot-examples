@@ -33,5 +33,5 @@ public class User {
 	@OneToOne
 	@JoinColumn(name="group_id")
 //	@Transient
-	private Group group;
+	private UserGroup group;
 }

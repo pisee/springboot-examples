@@ -19,8 +19,10 @@ public class SwaggerConfig {
 		return new Docket(DocumentationType.SWAGGER_2)
 				.apiInfo(apiInfo())
 				.select()
-				.apis(RequestHandlerSelectors.any())
-				.paths(PathSelectors.ant("/api/**"))
+				.apis(RequestHandlerSelectors.basePackage("com.doni.springboot.examples.controller"))
+//				.apis(RequestHandlerSelectors.any())
+//				.paths(PathSelectors.ant("/api/**"))
+				.paths(PathSelectors.any())
 				.build();
 	}
 

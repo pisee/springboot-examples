@@ -43,12 +43,12 @@ spring:
   profiles: h2
   datasource:
     driver-class-name: org.h2.Driver
-    url: jdbc:h2:file:~/data/springboot-examples-db;AUTO_SERVER=TRUE
-    username: dtuser
-    password: null
-#    url: jdbc:h2:mem:testdb
-#    username: sa
+#    url: jdbc:h2:file:~/data/springboot-examples-db;AUTO_SERVER=TRUE
+#    username: dtuser
 #    password: null
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password: null
   h2:
     console:
       enabled: true

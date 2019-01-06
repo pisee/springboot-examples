@@ -8,7 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.doni.springboot.examples.domain.Group;
+import com.doni.springboot.examples.domain.UserGroup;
 import com.doni.springboot.examples.domain.User;
 
 @RunWith(SpringRunner.class)
@@ -25,7 +25,7 @@ public class UserRepositoryTest {
 		user.setUserId("1");
 		user.setUserName("doni");
 		
-		Group group = new Group();
+		UserGroup group = new UserGroup();
 		group.setGroupId("1");
 		group.setGroupName("doni group");
 		user.setGroup(group);
