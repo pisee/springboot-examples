@@ -18,6 +18,8 @@ public class SwaggerConfig {
 	public Docket api() {
 		return new Docket(DocumentationType.SWAGGER_2)
 				.apiInfo(apiInfo())
+				.forCodeGeneration(true)
+				.host("127.0.0.1:8080")
 				.select()
 				.apis(RequestHandlerSelectors.basePackage("com.doni.springboot.examples.controller"))
 //				.apis(RequestHandlerSelectors.any())
@@ -30,6 +32,9 @@ public class SwaggerConfig {
         return new ApiInfoBuilder()
                 .title("Employee Service")
                 .description("OpenAPI Document")
+                .version("1.0")
+                .license("Apache 2.0")
+                .licenseUrl("http://www.apache.org/licenses/LICENSE-2.0")
                 .build();
  
     }
