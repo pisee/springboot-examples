@@ -1,13 +1,13 @@
 package com.doni.springboot.examples.domain;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -27,11 +27,11 @@ import lombok.ToString;
 public class User {
 	@Id
 	@Column(name = "user_id")
+//	@GeneratedValue(strategy = GenerationType.AUTO)
 	private String userId;
 	private String UserName;
 	
-	@OneToOne
-	@JoinColumn(name="group_id")
-//	@Transient
-	private UserGroup group;
+	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+//	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch=FetchType.EAGER)
+	private List<UserGroup> userGroups;
 }
