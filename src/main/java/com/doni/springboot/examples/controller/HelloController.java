@@ -7,18 +7,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import lombok.extern.slf4j.Slf4j;
+
 @RestController
+@Slf4j
 public class HelloController {
 
-	private static final Logger logger = LoggerFactory.getLogger(HelloController.class);
+//	private static final Logger log = LoggerFactory.getLogger(HelloController.class);
 	
 	@GetMapping("/hello")
 //	@RequestMapping(value="/hello", method=RequestMethod.GET)
 	public String hello() {
-		logger.debug("debug Hello");
-		logger.info("info Hello");
-		logger.warn("warn Hello");
-		logger.error("error Hello");
+		log.debug("debug Hello");
+		log.info("info Hello");
+		log.warn("warn Hello");
+		log.error("error Hello");
 		return "hello";
 	}
 }

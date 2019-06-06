@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Profile;
  * 클래스가 스프링 부트 응용 프로그램 @Configuration을 제공한다는 것을 나타냅니다. 
  * 스프링의 표준 @Configuration 어노테이션에 대한 대안으로 사용할 수 있으므로 자동으로 구성을 찾을 수 있습니다 (예 : 테스트).
  * 응용 프로그램에는 @SpringBootConfiguration이 하나만 포함되어야하며 
- * 대부분의 관용적 인 봄 부팅 응용 프로그램은 @SpringBootApplication에서 응용 프로그램을 상속합니다.
+ * 대부분의 관용적 인 스프링 부팅 응용 프로그램은 @SpringBootApplication에서 응용 프로그램을 상속합니다.
  * 
  * 
  * @EnableAutoConfiguration
@@ -40,7 +40,7 @@ import org.springframework.context.annotation.Profile;
  * 특정 패키지가 정의되지 않은 경우이 주석을 선언 한 클래스의 패키지에서 검색이 수행됩니다.
  * 
  * <context : component-scan> 요소에는 annotation-config 속성이 있습니다. 
- * 그러나이 주석은 그렇지 않습니다. 
+ * 그러나 이 주석은 그렇지 않습니다. 
  * 이는 @ComponentScan을 사용할 때 거의 모든 경우에 기본 주석 구성 처리 
  * (예 : @Autowired 및 friends 처리)가 가정되기 때문입니다. 
  * 또한 AnnotationConfigApplicationContext를 사용할 때 주석 구성 프로세서는 항상 등록되며 
