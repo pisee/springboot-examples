@@ -24,6 +24,21 @@ public class EmpService {
 		return empRepository.save(employee);
 	}
 	
+	public Employee update(Employee employee) {
+		if(findById(employee.getEmpNo()) == null) {
+			return null;			
+		}else {
+			return empRepository.save(employee);
+		}
+	}
+	
+	public Employee create(Employee employee) {
+		if(findById(employee.getEmpNo()) == null) {
+			return empRepository.save(employee);			
+		}else {
+			return null;
+		}
+	}
 	@Transactional
 	public Employee saveAndThrowException(Employee employee) {
 		empRepository.save(employee);
