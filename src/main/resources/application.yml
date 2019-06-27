@@ -12,6 +12,8 @@ logging:
     org.hibernate.type.descriptor.sql.BasicBinder: TRACE
 server:
   port: 8080
+  servlet:
+    context-path: /
 
 process:
   work:
