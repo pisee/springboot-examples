@@ -1,4 +1,4 @@
-package com.doni.springboot.examples.persistence.jpa.relation.domain;
+package com.doni.springboot.examples.persistence.jpa.relation.onetomany.twoway;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;

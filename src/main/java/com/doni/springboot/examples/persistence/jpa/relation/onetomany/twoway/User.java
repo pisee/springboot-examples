@@ -1,4 +1,4 @@
-package com.doni.springboot.examples.persistence.jpa.relation.domain;
+package com.doni.springboot.examples.persistence.jpa.relation.onetomany.twoway;
 
 import java.util.List;
 

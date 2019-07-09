@@ -1,4 +1,4 @@
-package com.doni.springboot.examples.persistence.jpa.relation.repository;
+package com.doni.springboot.examples.persistence.jpa.relation.onetomany.twoway;
 
 import static org.junit.Assert.assertEquals;
 
@@ -15,10 +15,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.doni.springboot.examples.persistence.jpa.relation.domain.User;
-import com.doni.springboot.examples.persistence.jpa.relation.domain.UserGroup;
-import com.doni.springboot.examples.persistence.jpa.relation.repository.UserGroupRepository;
-import com.doni.springboot.examples.persistence.jpa.relation.repository.UserRepository;
+import com.doni.springboot.examples.persistence.jpa.relation.onetomany.twoway.User;
+import com.doni.springboot.examples.persistence.jpa.relation.onetomany.twoway.UserGroup;
+import com.doni.springboot.examples.persistence.jpa.relation.onetomany.twoway.UserGroupRepository;
+import com.doni.springboot.examples.persistence.jpa.relation.onetomany.twoway.UserRepository;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
