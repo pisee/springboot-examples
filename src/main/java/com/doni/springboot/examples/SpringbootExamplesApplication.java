@@ -2,7 +2,6 @@ package com.doni.springboot.examples;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Profile;
 /**
  * @SpringBootApplication = @SpringBootConfiguration + @EnableAutoConfiguration + @ComponentScan
  * 
@@ -68,8 +67,12 @@ public class SpringbootExamplesApplication {
 //		.banner(new Banner() {
 //			@Override
 //			public void printBanner(Environment environment, Class<?> sourceClass, PrintStream out) {
-//				out.print("hellow my stock");
+//				out.print("hello my stock");
 //			}
 //		}).run(args);
+		
+//		new SpringApplicationBuilder(SpringBootApplication.class)
+//			.banner((environment, sourceClass, out) -> out.print("hello my stock"))
+//		.run(args);
 	}
 }
